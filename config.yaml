@@ -163,3 +163,17 @@ input_types:
   "text (Multiple lines of text.)": text
   url: url
   uuid: uuid
+framework_specific:
+  rake_tasks:
+    - rails4
+    - rails5
+    - sinatra
+  custom_php_inis:
+    - apache_php
+    - apache_php56
+  apache_htaccess_files:
+    - apache_php
+    - apache_php56
+  apache_httpd_configurations:
+    - apache_php
+    - apache_php56
