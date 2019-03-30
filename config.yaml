@@ -103,36 +103,36 @@ required_module_types:
   PECL: pecl
   PHP: php
 type_paths:
-  auth
-  avahi
-  backup
-  cert_auth
-  cron
-  database/nosql/mongo
-  database/sql/mysql
-  database/sql/pgsql
-  dhcpd
-  dns
-  dyndns
-  email
-  filesystem/local/filesystem
-  filesystem/remote/nfs
-  filesystem/service/ftp
-  filesystem/service/nfs
-  firstrun
-  imap
-  ldap
-  log_rotate
-  logview
-  mgmt
-  nginx
-  nosql_database
-  redis
-  schedule
-  smtp
-  syslog
-  system
-  wwwstats
+  - auth
+  - avahi
+  - backup
+  - cert_auth
+  - cron
+  - database/nosql/mongo
+  - database/sql/mysql
+  - database/sql/pgsql
+  - dhcpd
+  - dns
+  - dyndns
+  - email
+  - filesystem/local/filesystem
+  - filesystem/remote/nfs
+  - filesystem/service/ftp
+  - filesystem/service/nfs
+  - firstrun
+  - imap
+  - ldap
+  - log_rotate
+  - logview
+  - mgmt
+  - nginx
+  - nosql_database
+  - redis
+  - schedule
+  - smtp
+  - syslog
+  - system
+  - wwwstats
 input_types:
   "boolean [ Deprecated in favour of checkbox_boolean ]": boolean
   "checkbox (Single check box. Uses first item in collection for unchecked and second item for checked.)": checkbox
@@ -164,16 +164,17 @@ input_types:
   url: url
   uuid: uuid
 framework_specific:
-  rake_tasks:
-    - rails4
-    - rails5
-    - sinatra
-  custom_php_inis:
-    - apache_php
-    - apache_php56
-  apache_htaccess_files:
-    - apache_php
-    - apache_php56
-  apache_httpd_configurations:
-    - apache_php
-    - apache_php56
+  rails4:
+    - rake_tasks
+  rails5:
+    - rake_tasks
+  sinatra:
+    - rake_tasks
+  apache_php:
+    - custom_php_inis
+    - apache_htaccess_files
+    - apache_httpd_configurations
+  apache_php56:
+    - custom_php_inis
+    - apache_htaccess_files
+    - apache_httpd_configurations
